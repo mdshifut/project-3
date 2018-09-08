@@ -225,17 +225,19 @@ let edit = e => {
 
 
 let listFucn = e => {
-    clickedElement = e.target.getAttribute('data-setting')
+    if (e.target.tagName === 'I') {
+        clickedElement = e.target.getAttribute('data-setting')
 
-    if (clickedElement.trim() === 'edit') {
+        if (clickedElement.trim() === 'edit') {
 
 
-        createform('edit', e.target.parentNode.getAttribute('data-arrayindex'))
-    } else if (clickedElement.trim() === 'delete') {
-        deleteItem(e.target.parentNode.getAttribute('data-arrayindex'))
-    } else if (clickedElement.trim() === 'favorite') {
-        addFavorite(e.target.parentNode.getAttribute('data-arrayindex'))
-        e.target.classList.add('active')
+            createform('edit', e.target.parentNode.getAttribute('data-arrayindex'))
+        } else if (clickedElement.trim() === 'delete') {
+            deleteItem(e.target.parentNode.getAttribute('data-arrayindex'))
+        } else if (clickedElement.trim() === 'favorite') {
+            addFavorite(e.target.parentNode.getAttribute('data-arrayindex'))
+            e.target.classList.add('active')
+        }
     }
 }
 
