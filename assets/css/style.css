@@ -140,7 +140,7 @@ ul li:hover .settings-area {
     background: #7f8c8d;
 }
 
-.form-wrapper {
+.modal-wrapper {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -151,7 +151,7 @@ ul li:hover .settings-area {
     border-radius: 9px;
 }
 
-.form-wrapper input {
+.modal-wrapper input {
     display: block;
     margin: 5px 0;
     padding: 8px 10px;
@@ -163,20 +163,87 @@ input:focus {
     outline: none
 }
 
-.form-wrapper input[type="submit"] {
-    cursor: pointer;
-    background: #7f8fa6;
-    border-color: #7f8fa6;
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #2c3e50;
+    z-index: 9;
+    opacity: 0;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
 }
 
-.form-wrapper input[type="submit"]:hover {
+.modal-wrapper {
+    color: #fff;
+}
+
+.modal-wrapper ul li {
+    border-color: #dcdde1;
+}
+
+.modal-wrapper h4 {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.buttonWrpper span {
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 5px;
+    background: #e84118;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonWrpper input {
+    display: inline-block;
+    min-width: auto;
+    background: #487eb0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: 400;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    color: #fff;
+    border: none;
+}
+
+.buttonWrpper input:hover {
     background: #40739e;
+}
+
+.buttonWrpper input:disabled {
+    background: #dcdde1;
+    cursor: not-allowed;
+    color: #34495e;
+}
+
+.buttonWrpper span:first-child {
+    background: #4cd137;
+}
+
+.buttonWrpper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buttonWrpper span:hover {
+    background: #c23616;
+}
+
+.buttonWrpper span:first-child:hover {
+    background: #44bd32;
+}
+
+.country-list h1 {
+    margin-bottom: 25px;
 }
